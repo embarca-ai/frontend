@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,9 +18,10 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import HomeIcon from '@material-ui/icons/Home';
+import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
+import FlashOnIcon from '@material-ui/icons/FlashOn';
+import DirectionsBusIcon from '@material-ui/icons/DirectionsBus';
 
 import './styles.css';
 
@@ -54,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header(){
+  const history = useHistory();
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
@@ -77,18 +80,28 @@ export default function Header(){
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button key={'main'}>
+        <ListItem onClick={() => history.push("/")} button key={'main'}>
+          <ListItemIcon><DirectionsBusIcon /></ListItemIcon>
+          <ListItemText primary='Embarca Aí' />
+        </ListItem>
+
+        <Divider />
+
+        <ListItem  onClick={() => history.push("/")} button key={'main'}>
           <ListItemIcon><HomeIcon /></ListItemIcon>
           <ListItemText primary='Home' />
         </ListItem>
-        <Divider />
 
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button onClick={() => history.push("/")} key={'train'}>
+          <ListItemIcon><FlashOnIcon /></ListItemIcon>
+          <ListItemText primary='Treinar' />
+        </ListItem>
+
+        <ListItem button key={'rank'}>
+          <ListItemIcon><EmojiEventsIcon /></ListItemIcon>
+          <ListItemText primary='Ranking' />
+        </ListItem>
+
       </List>
       <Divider />
     </div>
