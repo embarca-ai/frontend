@@ -20,7 +20,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
-import FlashOnIcon from '@material-ui/icons/FlashOn';
+import SpellcheckIcon from '@material-ui/icons/Spellcheck';
+import FunctionsIcon from '@material-ui/icons/Functions';
 import DirectionsBusIcon from '@material-ui/icons/DirectionsBus';
 
 import './styles.css';
@@ -92,9 +93,14 @@ export default function Header(){
           <ListItemText primary='Home' />
         </ListItem>
 
-        <ListItem button onClick={() => history.push("/")} key={'train'}>
-          <ListItemIcon><FlashOnIcon /></ListItemIcon>
-          <ListItemText primary='Treinar' />
+        <ListItem button onClick={() => history.push("/lesson")} key={'train'}>
+          <ListItemIcon><SpellcheckIcon /></ListItemIcon>
+          <ListItemText primary='Português' />
+        </ListItem>
+
+        <ListItem button key={'math'}>
+          <ListItemIcon><FunctionsIcon /></ListItemIcon>
+          <ListItemText primary='Matemática' />
         </ListItem>
 
         <ListItem button key={'rank'}>

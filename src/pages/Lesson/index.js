@@ -1,40 +1,103 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Paper } from '@material-ui/core';
+import { Star, StarHalf, StarBorder } from '@material-ui/icons';
+
 
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 
 import './styles.css';
 
-import videoImg from '../../assets/video.png'
-import rewardImg from '../../assets/reward.png'
+const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: 20
+    },
+    paper: {
+        padding: 10,
+        marginBottom: 4,
+        display: 'flex', 
+        alignItems: 'center',
+        flexFlow: 'column'
+    }
+  }));
 
 export default function Lesson() {
+    const classes = useStyles();
 
     return (
         <>
         <Header />
-        <div className="lesson-container">
-            <div className="video-container">
-                <img src={videoImg} alt="Video"/>
+        <div className={classes.root}>
+        <Typography variant='h5' 
+                style={{ fontSize: 18, display: 'block', paddingBottom: 8 }}>
+                    Língua Portuguesa
+        </Typography>
+        <Paper variant="outlined" className={classes.paper}>
+            <div>
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <StarHalf style={{ fontSize: 16, marginRight: 4 }} />
             </div>
-            <h3>Introdução à Química</h3>
-            <section>
-                <div className="lesson-container">
-                    <p>Preparada para essa Missão?</p>
-                    <p>Hoje descobriremos o que é a Química,</p>
-                    <p>como surgiu e seus principais conceitos.</p>
-                    <span>Professor: Evandro Brandão.</span>
-                </div>
-            </section>
-            <div className="award-container">
-                <img src={rewardImg} alt="Recompensa"/>
-                <p>Recompensa: </p>
-                <p>15 pontos de Experiência</p>
-                <p>20 moedas</p>
+            <Typography style={{ textAlign: 'center' }}>PROCEDIMENTOS DE LEITURA</Typography>
+        </Paper>
+        <Paper variant="outlined" className={classes.paper}>
+            <div>
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <StarHalf style={{ fontSize: 16, marginRight: 4 }} />
+                <StarBorder style={{ fontSize: 16, marginRight: 4 }} />
             </div>
+            <Typography style={{ textAlign: 'center' }}>IMPLICAÇÕES DO SUPORTE, DO GÊNERO E/OU DO ENUNCIADOR NA COMPREENSÃO DO TEXTO</Typography>
+        </Paper>
+        
+        <Paper variant="outlined" className={classes.paper}>
+            <div>
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <StarHalf style={{ fontSize: 16, marginRight: 4 }} />
+                <StarBorder style={{ fontSize: 16, marginRight: 4 }} />
+                <StarBorder style={{ fontSize: 16, marginRight: 4 }} />
+            </div>
+            <Typography style={{ textAlign: 'center' }}>RELAÇÃO ENTRE TEXTOS</Typography>
+        </Paper>
+        
+        <Paper variant="outlined" className={classes.paper}>
+            <div>
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <StarHalf style={{ fontSize: 16, marginRight: 4 }} />
+                <StarBorder style={{ fontSize: 16, marginRight: 4 }} />
+            </div>
+            <Typography style={{ textAlign: 'center' }}>COERÊNCIA E COESÃO NO PROCESSAMENTO DO TEXTO</Typography>
+        </Paper>
+
+        <Paper variant="outlined" className={classes.paper}>
+            <div>
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <StarHalf style={{ fontSize: 16, marginRight: 4 }} />
+            </div>
+            <Typography style={{ textAlign: 'center' }}>RELAÇÕES ENTRE RECURSOS EXPRESSIVOS E EFEITOS DE SENTIDO</Typography>
+        </Paper>
+        
+        <Paper variant="outlined" className={classes.paper}>
+            <div>
+                <Star style={{ fontSize: 16, marginRight: 4 }} />
+                <StarHalf style={{ fontSize: 16, marginRight: 4 }} />
+                <StarBorder style={{ fontSize: 16, marginRight: 4 }} />
+                <StarBorder style={{ fontSize: 16, marginRight: 4 }} />
+                <StarBorder style={{ fontSize: 16, marginRight: 4 }} />
+            </div>
+            <Typography style={{ textAlign: 'center' }}>VARIAÇÃO LINGUÍSTICA</Typography>
+        </Paper>
 
         </div>
-        <Footer />
         </>
     );
 }
