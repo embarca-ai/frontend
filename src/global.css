@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+div#root {
+    width: 100%;
+    margin: 0 auto;
+}
