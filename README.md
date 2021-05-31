@@ -24,6 +24,10 @@ Solução desenvolvida como proposta ao Hackathon Batalha de Dados Itaú 2021.
 - <b>Investimento público</b>: Reforma de ônibus escolares através de financiamento de órgaõs publicos em parceria de empresas privadas
 - <b>Clientes</b>: Empresas de transporte, de tecnologia e de ensino
 
+## Vídeos
+ - [Pitch](https://youtu.be/lv2vgy7vzlc)
+ - [Demo App](https://www.youtube.com/watch?v=dR3_RDakJis)
+ - [Demo Análise de Dados](https://www.youtube.com/watch?v=T-1CNxdFLNo)
 
 ## ⚙ Tecnologias
 
